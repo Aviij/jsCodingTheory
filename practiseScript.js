@@ -167,7 +167,9 @@ function updateRecords(id, prop ,val){
 
     
     if(val === "") {
-        delete collection(id, prop);
+
+        
+        delete collection[id][prop];
 
     } else if(prop === "tracks"){
 
@@ -303,13 +305,123 @@ for(let i = 0; i < arr.length;i++){
 
         total*=numbers;
 
-        console.log(total)
+       // console.log(total)
 
     }
 }
 
 return total;
 
+}
+
+//multiplayAll(product);
+//iterate with do while loops 
+
+var smartPhones = [ ];
+
+var i = 0;
+
+do{
+    smartPhones.push(i);
+    i++;
+}
+while( i < 50 );
+
+
+//console.log(smartPhones);
+
+
+//profile lookup | coding challenge - 100% my effort ;-)
+
+var contacts = [
+    {
+        firstName : 'Akira',
+        lastName: 'Zen',
+        number:'001',
+        likes:'["JS"],["Java"],["C#"]'
+    },
+    {
+        firstName : 'Looper',
+        lastName: 'jil',
+        number:'002',
+        likes:'["htl"],["html"],["loop"]'    }, 
+    {
+        firstName : 'loop',
+        lastName: 'hill',
+        number:'003',
+        likes:'["html"],["css"],["js"]'    }, 
+    {
+        firstName : 'troop',
+        lastName: 'till',
+        number:'004',
+        likes:'["js"],["conding "],["TS"]'    },
+    {
+        firstName : 'nalaka',
+        lastName: 'Dr',
+        number:'005',
+        likes:'["IT"],["research"],["PhD"]'   
+     },
+
+
+];
+
+let propertygiven  = "lastName"
+console.log(contacts[1][propertygiven]);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////TURNING POINT/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//when name and property is  being passed as arguments(key) , it should return the 
+//corresponding value
+
+function lookUpProfile(name,propertyOf){
+
+    let lookingFor = propertyOf;
+
+    //iterate through the contact list 
+   for( let i = 0; i  < contacts.length;i++){
+
+        var nameOf = contacts[i].firstName;
+
+       // console.log(contacts[i].firstName);
+        if( nameOf === name){
+            console.log("match found : ", contacts[i].firstName,"${looknig for } is : ",contacts[i][lookingFor]);
+        }
+        else {
+
+           
+        }
+        // console.log("number of number : " , contacts[i].number);
+
+   }
+}
+
+//I failed to code for erorrs null values,etc.. so my code snippet is not clean and its buggy
+
+/*lookUpProfile("Looper","lastName");
+lookUpProfile("Akira","number");
+
+lookUpProfile("loop","likes");
+
+//what to output when the arguments are not matching to any key in the object array??
+lookUpProfile("nalaka","likes");
+*/
+
+//code of freecodecamp coder (experienced)
+
+
+function searchInfo(name, props){
+
+    for( let i = 0; i  < contacts.length;i++){
+        if ( contacts[i].firstName === name){
+            return contacts[i][props] || " no such property";
+      }
+    }
+    return " no such contant! ";
+
 
 }
-multiplayAll(product);
+
+var searchResults = searchInfo("nalaka","likes");
+console.log(searchResults);
