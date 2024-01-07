@@ -1,5 +1,6 @@
 console.log("this is from the second script file");
 
+
 //manipulating complex objects 
 
 var myMusic = [
@@ -209,12 +210,106 @@ var collection = [
 
 //while loops 
 
-var myArray = [];
 
+var myArray = [];
+var hisArray = [];
+/*
 var i = 0;
 
+var timeStarted= performance.now();
 
-while (i < 5 ){
+
+while (i < 5){
     myArray.push(i);
     console.log(myArray[i]);
+    i++;
 }
+var timeEnded= performance.now();
+
+var totalTimer = timeEnded - timeStarted;
+
+
+*/
+
+/*
+console.timeEnd('looper');
+
+console.time("forLooper");
+
+//for loops 
+/*
+for (i = 0; i < 1000;i++){
+    hisArray.push(i);
+    console.log("this " , hisArray[i]);
+}
+console.log("while loop complie time : " , endTimeOne);
+console.timeEnd("forLooper");
+
+// using performance API 
+
+const startTime = performance.now();
+
+// Code to measure
+for (let i = 1; i < 50; i+=2) {
+  hisArray.push(i);
+  console.log("this ", hisArray[i]);
+}
+
+
+const endTime = performance.now();
+const executionTime = endTime - startTime;
+
+console.log("For loop execution time:", executionTime);
+console.log("time taken for while loop : " , totalTimer);
+
+
+*/
+
+var countArray = [];
+
+
+for(let i=9; i > 0;i-=2){
+    countArray.push(i);
+    //console.log('this is',countArray[i]);
+    
+}
+
+//console.log(countArray);
+
+//iterate through an array with a for loop 
+
+
+var names = ["eins",'zwei','deri','veir','funf','sechs','sieben','acht'];
+
+for( let i = 0 ; i < names.length;i++){
+    //console.log("german number : ", names[i]);
+}
+
+var product = [[4,6],[7,9],[9,8,7]];
+
+/*console.log("lenght of the Array : " , product.length);
+console.log("length of an array in the array : " , product[2].length);*///
+
+function multiplayAll (arr) {
+
+    var total = 1;
+
+
+for(let i = 0; i < arr.length;i++){
+
+    for(let j = 0; j < arr[i].length;j++){
+
+        var numbers = arr[i][j];
+
+        total*=numbers;
+
+        console.log(total)
+
+    }
+}
+
+return total;
+
+
+}
+multiplayAll(product);
