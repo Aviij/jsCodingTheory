@@ -424,4 +424,194 @@ function searchInfo(name, props){
 }
 
 var searchResults = searchInfo("nalaka","likes");
-console.log(searchResults);
+//console.log(searchResults);
+
+//generate random decial numbers 08/01
+
+function randomFunction(){
+
+    return Math.ceil(Math.random()*7);
+    
+}
+
+
+ randomFunction();
+ randomFunction();
+ randomFunction();
+ randomFunction();
+ randomFunction();
+console.log(randomFunction());
+
+
+
+var luckyNumber = randomFunction();
+
+//Lucky Draw govi setha ////just for fun/////
+function goviSetha ( number){
+
+    if ( number === luckyNumber){
+
+        console.log("2 MILLION WIN ");
+    }else {
+        console.log("NO WIN! Good Luck next Time ");
+    }
+
+}
+
+//goviSetha(5);
+//use the parseInt function 
+console.log("//////////////////////////////////////// 08 | 01 ////////////////////////////////////////////////////////////")
+
+function convertToInt( str ){
+
+//console.log( "Before parsing : ", typeof(str));
+//console.log( parseInt(str));
+var parsedNumber = parseInt(str);
+
+//console.log( "After parsing to int :" ,typeof(parsedNumber));
+
+
+
+
+}
+
+//user parseInt function with a Radix 
+
+function converToInteger ( str){
+
+    //binar to integer 
+
+    
+   // console.log(str + " in deciaml : " +parseInt(str, 2));
+    return parseInt(str, 2);
+
+
+
+
+
+}
+
+//Ternary Operator 
+function checkRace (race){
+
+
+    if( race === "Tamil"){
+
+        return " Beauty";
+
+    }else {
+
+        return "not cute";
+
+    } 
+
+}
+
+function checkEqual(a, b){
+
+    if ( a != b ){
+
+        console.log(" equal");
+
+    }else if(a === b){
+
+        console.log("in this check the quality of a and b ");
+    }else { console.log("not equal");
+
+    }
+
+}
+
+/*
+
+var numA = 20;
+var numB = "90";
+
+var sum = numA+numB;
+
+
+console.log("number A is : " ,typeof(numA));
+console.log("number B is : " ,typeof(numB));
+console.log("sum is : " ,typeof(sum),sum);*/
+
+//multiple ternary operators 
+/*
+console.log(numA == numB ? "yes" : numA == 20 ? "woow match" : "no luck ");
+
+*/
+
+//mutate an arrya declared with const ;
+
+"use strict";
+/*////////
+const namesAll = [1,2,4,5];
+
+//namesAll = [1,2,3]; // throw an error uncaught error assign to const variable 
+namesAll = [1,20,3,78];
+
+//but arrays are immutable in java i guess
+
+namesAll[0]  = 9;// yet can be mutate using index,
+
+
+
+console.log(namesAll);
+
+*/
+
+//prevent object mutation 
+
+function freezeObject ( ){
+
+    "use strict";
+
+    const MATH_CONSTANTS = {
+        PI : 3.14,
+    };
+
+
+    Object.freeze(MATH_CONSTANTS);//make the properties of an object readonly/
+
+    try{
+        MATH_CONSTANTS.PI = 99;
+    }catch(ex) {
+        console.log(ex);
+    }
+
+    return MATH_CONSTANTS.PI;
+}
+
+const PI = freezeObject();
+console.log(PI);
+
+
+//arrow functions 
+
+function add(a, b){
+
+    return a + b;
+
+}
+
+//annonymus functions 
+// annonymus functions can be converted into an arrow function 
+
+
+
+var magic = () => new Date();
+
+
+var myConcat = (arr2 , arr3) => arr2.concat(arr3);//
+//console.log(myConcat([1,2],[34,44]));
+
+//higher order arrow functions 
+var realNumbers = [1,2.3,45,52,-209,0];
+///
+/*//////////////////////////////////////////////////////////////// didnt understand anything here 
+const squareList = (arr) => {
+    const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0.map( x =>  x*x ));
+    return squaredIntegers;
+}*/
+
+
+
